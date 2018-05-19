@@ -1,15 +1,24 @@
 <template>
-    <top-nav-bar></top-nav-bar> 
-
+<div>
+<top-nav-bar/>
+<b-container fluid>
+     
+    <router-view/>
+    <my-footer/>
+</b-container>
+</div>
 </template>
 
 <script>
     import 'bootstrap/dist/css/bootstrap.css'
     import 'bootstrap-vue/dist/bootstrap-vue.css'
     import TopNavBar from '@/components/top-navbar.vue'
+    import MyFooter from '@/components/footer.vue'
+    
     export default {
         components:{
-            TopNavBar
+            TopNavBar,
+            MyFooter
         }
     }
 </script>
