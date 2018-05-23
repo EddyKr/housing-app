@@ -1,12 +1,14 @@
 <template>
-<div>
+<div >
 <top-nav-bar/>
-<b-container fluid>
-     
+
     <router-view/>
-    <my-footer/>
-</b-container>
+
+
+
+  <my-footer/>
 </div>
+
 </template>
 
 <script>
@@ -14,7 +16,7 @@
     import 'bootstrap-vue/dist/bootstrap-vue.css'
     import TopNavBar from '@/components/top-navbar.vue'
     import MyFooter from '@/components/footer.vue'
-    
+
     export default {
         components:{
             TopNavBar,
@@ -24,6 +26,7 @@
 </script>
 
 <style>
+
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;

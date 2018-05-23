@@ -1,80 +1,122 @@
 <template>
-<footer>
-     <div class="container">
-       <div class="row">
-       
-                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
-                    <ul class="adress">
-                         <span>Adress</span>    
-                         <li>
-                            <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
-                          </li>
-                               
-                          <li>
-                            <p>+90 1234 56789</p>
-                          </li>
-                               
-                          <li>
-                            <p>info@gmail.com</p>
-                          </li>
-                     </ul>
-                </div>
-                
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <ul class="contact">
-                         <span>Contact</span>    
-                         <li>
-                            <a href="#">Home</a>
-                          </li>
-                               
-                          <li>
-                             <a href="#">About</a>
-                          </li>
-                               
-                          <li>
-                            <a href="#">Blog</a>
-                          </li>
-                               
-                          <li>
-                             <a href="#">Gallery </a>
-                          </li>
-                               
-                          <li>
-                            <a href="#">Contact</a>
-                         </li>
-                    </ul>
-                </div>
-           
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                   <ul class="social">
-                              <span>Social</span>    
-                               <li>
-                                    <a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-                               </li>
-                              
-                               <li>
-                                    <a href="#"><i class="fa fa-github fa-2x"></i></a>
-                               </li>
-                                
-                               <li>
-                                    <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
-                               </li>
-                               
-                               <li>
-                                    <a href="#"><i class="fa fa-tumblr fa-2x"></i></a>
-                               </li>
-                                
-                               <li>
-                                    <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
-                              </li>
-                              
-                     </ul>
-                </div>
-           
-           
-           </div> 
+                      
+<!-- Footer -->
+<footer class="page-footer font-small indigo mt-4">
+
+  <!-- Footer Links -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">About us</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Products</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Awards</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Help</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 mb-3">
+        <h6 class="text-uppercase font-weight-bold">
+          <a href="#!">Contact</a>
+        </h6>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="rgba-white-light" style="margin: 0 15%;">
+
+    <!-- Grid row-->
+    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+
+      <!-- Grid column -->
+      <div class="col-md-8 col-12 mt-5">
+        <p style="line-height: 1.7rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+    <!-- Grid row-->
+    <div class="row pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-12">
+
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fa fa-facebook fa-lg white-text mr-md-4"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fa fa-twitter fa-lg white-text mr-md-4"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fa fa-linkedin fa-lg white-text mr-md-4"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fa fa-instagram fa-lg white-text mr-md-4"> </i>
+          </a>
+          <!--Pinterest-->
+          <a class="pin-ic">
+            <i class="fa fa-pinterest fa-lg white-text"> </i>
+          </a>
+
         </div>
-    </footer>  
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> YourHousing</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
 </template>
 
 <script>
@@ -83,48 +125,5 @@ export default {
 }
 </script>
 <style>
-body{
-    font-family:Roboto;
-}
 
-footer{
-     background-color: #33383c;
-     padding:70px 0px;
-}	       
-
-footer ul li{
-    padding:5px 0px;
-}
-
-.adress span , .contact span , .social span{
-   color: #FFF; 
-   font-weight: 800; 
-   padding-bottom: 10px; 
-   margin-bottom: 20px;
-   display: block;
-   text-transform: uppercase;
-   font-size: 20px;
-   letter-spacing: 3px;
-}
- 
-.adress li p , .contact li a , .social li a{
-    color:#FFF;
-    letter-spacing: 2px;
-    text-decoration:none;
-    font-size:15px;
-}
-
-.social li{
-    float:left;
-}
-
-.adress , .contact , .social {
-    list-style: none;
-}
-
-.fa{
-    color:#9c9c9c;
-    margin-right: 15px;
-    font-size:14px;
-}
 </style>
