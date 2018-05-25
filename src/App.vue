@@ -1,12 +1,26 @@
 <template>
 <div >
+
+
+
+
 <top-nav-bar/>
+
+
+
+
 
     <router-view/>
 
 
 
+
+
+
+
   <my-footer/>
+
+
 </div>
 
 </template>
@@ -47,4 +61,6 @@
     #nav a.router-link-exact-active {
         color: #42b983;
     }
+    
+
 </style>
