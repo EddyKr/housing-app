@@ -46,10 +46,10 @@ export default {
 }
 </script>
 
-<style>
-
-
+<style scoped>
+h2,h4{color: whitesmoke;}
 </style>
+
 
 
 
