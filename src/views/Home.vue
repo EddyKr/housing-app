@@ -56,9 +56,14 @@
         },
             data(){
             return {
-                image:['https://scontent-ams3-1.xx.fbcdn.net/v/t31.0-8/18056478_1499561853388371_2053835354663588596_o.jpg?_nc_cat=0&oh=54d9ae5335c02b9092f41d9ce1259f19&oe=5BC50409']
+                image:require('../assets/bckg2.jpg')
             }
+
+
+
         }
+
+        
 
     }
 </script>

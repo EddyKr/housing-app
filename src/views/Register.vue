@@ -4,11 +4,7 @@
 
 
     <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <b-row>
-        <b-col cols="6" md="4"></b-col>
-        <b-col cols="6" md="4">	</b-col>
-        <b-col cols="6" md="4"></b-col>
-    </b-row>
+
 	    <b-row>
         <b-col cols="6" md="4"></b-col>
         <b-col cols="6" md="4">
@@ -17,11 +13,18 @@
 			
 			    	<form accept-charset="UTF-8" role="form">
                     <fieldset>
-                      <div class="form-group">
-			    		    <input class="form-control" placeholder="First name" name="lastname" type="text">
-			    		</div>
-              <div class="form-group">
-			    		    <input class="form-control" placeholder="Last name" name="firstname" type="text">
+						    <div class="form-group">
+                      <div class="form-row">
+			    		<div class="col">
+							 <input class="form-control" placeholder="First name" name="lastname" type="text">
+							</div>   
+			    		<div class="col">
+							<input class="form-control" placeholder="Last name" name="firstname" type="text">
+							</div> 
+						
+						</div>
+          
+			    		    
 			    		</div>
 			    	  	<div class="form-group">
 			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
@@ -61,7 +64,11 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
+h3{
+	color: whitesmoke;
+		margin-left: 30%;
+}
     #register {
 
  
