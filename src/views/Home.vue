@@ -1,48 +1,39 @@
 <template>
 <div class="img" v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
-
     <my-banner />
-    <b-container>
-
-
-<div class="row" style="padding-top: 5%;padding-bottom: 5%;">
-<div class="col-md-4">
-<my-grid/>
-</div> <!-- col // -->
-<div class="col-md-4">
-<my-grid/>	
-</div> <!-- col // -->
-<div class="col-md-4">
-	<my-grid/>
-</div> <!-- col // -->
-</div> <!-- row.// -->
+<b-container>
 
 <div class="row" style="padding-top: 5%;padding-bottom: 5%;">
-<div class="col-md-4">
-	<my-grid/>
-</div> <!-- col // -->
-<div class="col-md-4">
-	<my-grid/>
-</div> <!-- col // -->
-<div class="col-md-4">
-<my-grid/>
-</div> <!-- col // -->
-</div> <!-- row.// -->
+    <div class="col-md-4">
+    <my-grid/>
+    </div> 
+    <div class="col-md-4">
+    <my-grid/>	
+    </div> 
+    <div class="col-md-4">
+        <my-grid/>
+    </div> 
+</div> 
 
-
-
-
-
+<div class="row" style="padding-top: 5%;padding-bottom: 5%;">
+    <div class="col-md-4">
+        <my-grid/>
+    </div> 
+    <div class="col-md-4">
+        <my-grid/>
+    </div> 
+    <div class="col-md-4">
+    <my-grid/>
+    </div>
+</div> 
         
-    </b-container>
-    
+</b-container>    
 </div>
 
 </template>
 
 <script>
-// @ is an alias to /src
-
+    // @ is an alias to /src
     import 'bootstrap/dist/css/bootstrap.css'
     import 'bootstrap-vue/dist/bootstrap-vue.css'
     import MyBanner from '@/components/banner.vue'
@@ -58,21 +49,16 @@
             return {
                 image:require('../assets/bckg2.jpg')
             }
-
-
-
-        }
-
-        
+        }     
 
     }
 </script>
+
 <style>
     .img {
     max-width: 100%;
     max-height: 100%;
 }
-
 .card-product .img-wrap {
   
     border-radius: 3px 3px 0 0;
@@ -102,7 +88,6 @@
     display: inline-block;
     vertical-align: middle;
 }
-
 .card-product .price-old {
     color: #999;
 }
