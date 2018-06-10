@@ -1,64 +1,56 @@
 <template>
 
 <b-container class="bv-example-row">
-	<b-row>
+    <b-row>
+        <b-col cols="6" md="4"></b-col>
+            <b-col cols="6" md="4">                
+                <h3 class="panel-title">Registration</h3>
+                <b-form @submit="submit()">
+                    <label class="sr-only" for="inlineFormInputName2">Name</label>
+                    <b-input class="mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe" v-model="credentials.email" />
 
-        			<b-col cols="6" md="4"></b-col>
-        <b-col cols="6" md="4">
-			
-					<h3 class="panel-title">Registration</h3>
-			
-			    	<form accept-charset="UTF-8" role="form">
-                    <fieldset>
-						<div class="form-group">
-							<div class="form-row">
-								<div class="col">
-									<input class="form-control" placeholder="First name" name="lastname" type="text">
-								</div>   
-								<div class="col">
-									<input class="form-control" placeholder="Last name" name="firstname" type="text">
-								</div>
-							</div>      
-						</div>
+                    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+                    <b-input-group left="@" class="mb-2 mr-sm-2 mb-sm-0">
+                        <b-input type="password" id="inlineFormInputGroupUsername2" placeholder="Password" v-model="credentials.password"  />
+                    </b-input-group>
 
-						<div class="form-group">
-							<input class="form-control" placeholder="E-mail" name="email" type="text">
-						</div>
-
-						<div class="form-group">
-							<input class="form-control" placeholder="Phone nr. (optional)" name="phone" type="text">
-						</div>
-
-						<div class="form-group">
-							<input class="form-control" placeholder="Password" name="password" type="password" value="">
-						</div>
-
-						<div class="form-group">
-							<input class="form-control" placeholder="Repeat Password" name="password" type="password" value="">
-						</div>
-
-						<input class="btn btn-lg btn-success btn-block" type="submit" value="Register">
-			    	</fieldset>
-			      	</form>		  
-		</b-col>
-        			<b-col cols="6" md="4"></b-col>
-
+                    <b-button type="submit" variant="primary">Register</b-button>
+                </b-form>
+            </b-col>
+            <b-col cols="6" md="4"></b-col>
     </b-row>
 </b-container>
 
 </template>
 
 <script>
-export default {  
-}
+    import  auth  from "@/auth";
+
+    export default {
+        data() {
+            return {
+                credentials: {
+                    email: '',
+                    password: ''
+                }
+            }
+        },
+        methods: {
+            submit() {
+                var credentials = {
+                    email: this.credentials.email,
+                    password: this.credentials.password
+                }
+                auth.signup(this, credentials, '/')
+            }
+        }
+    };
 </script>
 
 <style scoped>
-h3{
-	color: whitesmoke;
-	margin-left: 30%;
-}
-#register { 
+h3 {
+  color: whitesmoke;
+  margin-left: 30%;
 }
 </style>
 

@@ -2,7 +2,6 @@
 <div class="img" v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
     <my-banner />
 <b-container>
-
 <div class="row" style="padding-top: 5%;padding-bottom: 5%;">
     <div class="col-md-4">
     <my-grid/>
@@ -47,9 +46,10 @@
         },
             data(){
             return {
-                image:require('../assets/bckg2.jpg')
+                image:require('../assets/bckg2.jpg'),
             }
-        }     
+        },
+  
 
     }
 </script>

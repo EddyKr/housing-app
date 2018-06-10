@@ -5,14 +5,14 @@
         <b-col cols="6" md="4"></b-col>
         <b-col cols="6" md="4">			
 			<h3 class="panel-title">Log In</h3>
-				<form accept-charset="UTF-8" role="form">
+				<form @submit="login()" accept-charset="UTF-8" role="form">
                     <fieldset>
 
 			    	  	<div class="form-group">
-			    		    <input class="form-control" placeholder="E-mail" name="email" type="text">
+			    		    <input class="form-control" v-model="credentials.email" placeholder="E-mail" name="email" type="text">
 			    		</div>
 			    		<div class="form-group">
-			    			<input class="form-control" placeholder="Password" name="password" type="password" value="">
+			    			<input class="form-control" v-model="credentials.password" placeholder="Password" name="password" type="password" value="">
 			    		</div>
 			    		<div class="checkbox">
 			    	    	<label>
@@ -31,7 +31,23 @@
 </template>
 
 <script>
-export default {  
+  import auth from '@/auth'
+
+export default {
+	data() {
+      return {
+        credentials: {
+          email: '',
+          password: ''
+        }
+      }
+    },
+
+    methods: {
+	  login() {
+	  	 auth.login(this, this.credentials, '/');
+	  }
+    }  
 }
 </script>
 

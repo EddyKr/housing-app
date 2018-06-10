@@ -1,8 +1,12 @@
 <template>
-<div>
+<div v-if="$auth.ready()">
+        
 <top-nav-bar/>
 <router-view/>
 <my-footer/>
+</div>
+<div v-else>
+        123
 </div>
 </template>
 
