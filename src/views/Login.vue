@@ -1,61 +1,57 @@
 <template>
+	<b-container class="bv-example-row">
+		<b-row>
+			<b-col></b-col>
+			<b-col sm="6" md="6" lg="5" xl="4">			
+				<h3 class="panel-title">Log In</h3>
+					<form @submit="login()" accept-charset="UTF-8" role="form">
+						<fieldset>
 
-<b-container class="bv-example-row">
-	<b-row>
-        <b-col cols="6" md="4"></b-col>
-        <b-col cols="6" md="4">			
-			<h3 class="panel-title">Log In</h3>
-				<form @submit="login()" accept-charset="UTF-8" role="form">
-                    <fieldset>
+							<div class="form-group">
+								<input class="form-control" v-model="credentials.email" placeholder="E-mail" name="email" type="text">
+							</div>
+							<div class="form-group">
+								<input class="form-control" v-model="credentials.password" placeholder="Password" name="password" type="password" value="">
+							</div>
+							<div class="checkbox">
+								<label>
+									<input name="remember" type="checkbox" value="Remember Me"> Remember Me
+								</label>
+							</div>
+							<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
 
-			    	  	<div class="form-group">
-			    		    <input class="form-control" v-model="credentials.email" placeholder="E-mail" name="email" type="text">
-			    		</div>
-			    		<div class="form-group">
-			    			<input class="form-control" v-model="credentials.password" placeholder="Password" name="password" type="password" value="">
-			    		</div>
-			    		<div class="checkbox">
-			    	    	<label>
-			    	    		<input name="remember" type="checkbox" value="Remember Me"> Remember Me
-			    	    	</label>
-			    	    </div>
-			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
-
-			    	</fieldset>
-			    </form>  	  
-		</b-col>
-        <b-col cols="6" md="4"></b-col>
-    </b-row>
-</b-container>
-
+						</fieldset>
+					</form>  	  
+			</b-col>
+			<b-col></b-col>
+		</b-row>
+	</b-container>
 </template>
 
 <script>
   import auth from '@/auth'
 
-export default {
-	data() {
-      return {
-        credentials: {
-          email: '',
-          password: ''
-        }
-      }
-    },
+	export default {
+		data() {
+				return {
+					credentials: {
+						email: '',
+						password: ''
+					}
+				}
+			},
 
-    methods: {
-	  login() {
-	  	 auth.login(this, this.credentials, '/');
-	  }
-    }  
-}
+			methods: {
+			login() {
+				auth.login(this, this.credentials, '/');
+			}
+			}  
+	}
 </script>
 
 <style scoped>
-h3{
-	color: whitesmoke;
-	margin-left: 40%;
-}
-#login {
-}
+	h3{
+		color: whitesmoke;
+		margin-left: 40%;
+	}
 </style>

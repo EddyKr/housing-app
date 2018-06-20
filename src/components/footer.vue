@@ -1,93 +1,111 @@
-<template>                      
-
-<footer class="page-footer font-small indigo mt-4">
- 
-  <div class="container">
-
-        <div class="row text-center d-flex justify-content-center pt-5 mb-3">      
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">About us</a>
-            </h6>
-          </div>
-
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Products</a>
-            </h6>
-          </div>
-
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Awards</a>
-            </h6>
-          </div>
-
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Help</a>
-            </h6>
-          </div>
-
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Contact</a>
-            </h6>
-          </div>          
-        </div><!--row text-center d-flex justify-content-center pt-5 mb-3-->
-
-    <hr class="rgba-white-light" style="margin: 0 15%;">
-    <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-      <div class="col-md-8 col-12 mt-5">
-        <p style="line-height: 1.7rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
-      </div>
-    </div>    
-    <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
-
-
-    <div class="row pb-3">
-      <div class="col-md-12">
-
-        <div class="mb-5 flex-center">
-            <a class="fb-ic">
-              <i class="fa fa-facebook fa-lg white-text mr-md-4"> </i>
-            </a>
-            <a class="tw-ic">
-              <i class="fa fa-twitter fa-lg white-text mr-md-4"> </i>
-            </a>
-            <a class="gplus-ic">
-              <i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i>
-            </a>
-            <a class="li-ic">
-              <i class="fa fa-linkedin fa-lg white-text mr-md-4"> </i>
-            </a>
-            <a class="ins-ic">
-              <i class="fa fa-instagram fa-lg white-text mr-md-4"> </i>
-            </a>
-            <a class="pin-ic">
-              <i class="fa fa-pinterest fa-lg white-text"> </i>
-            </a>
+<template>                     
+    <div class="footer-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <h3 class="text-center">ABOUT Your Housing</h3>
+                    <div class="footer-logo text-center"><img src="../assets/housingICON.png" style="height: 100px;"></div>
+                    <p>YourHousing is a project started by young uprising proffesionals from The Netherlands. At the time of project creations all team members were still students.
+                    Our main goal is to provide best possible freemium solution without 3rd parties for accommodation in The Netherlands. </p>
+                </div>
+                <div class="col-md-2 col-sm-2 text-center">
+                    <h3>Quick  LInks</h3>
+                    <ul class="footer-links text-center">
+                        <li><a href="#."><router-link to="/">Home</router-link></a></li>
+                        <li><a href="#."><router-link to="">Search</router-link></a></li>
+                        <li><a href="#."><router-link to="register">Registration</router-link></a></li>
+                        <li><a href="#."><router-link to="login">LogIn</router-link></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-3 text-center">
+                    <h3>Social Media</h3>
+                    <ul class="footer-category">
+                        <li><a target="_blank" href="https://www.Facebook.com/">Facebook</a></li>
+                        <li><a target="_blank" href="https://www.Twitter.com/">Twitter</a></li>
+                        <li><a target="_blank" href="https://www.Instagram.com/">Instagram</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-md-3 col-sm-3 text-center">
+                    <h3>Contact Us</h3>
+                    <div class="info"><i aria-hidden="true"></i> <a>Eindhoven 5611, Rachelsmolen 1</a></div>
+                    <div class="info"><i aria-hidden="true"></i> <a>(777) 123 4567</a></div>
+                    <div class="info"><i aria-hidden="true"></i> <a>(123) 456 7890</a></div>
+                </div>
+            </div>
+            <div class="copyright">Copyright © 2017 YourHousing - All Rights Reserved.</div>
         </div>
-
-      </div><!--row pb-3-->
-    </div><!--col-md-12-->
-
-
-  </div><!--container-->
-
-  <div class="footer-copyright text-center py-3">© 2018 Copyright:
-    <a href="https://mdbootstrap.com/bootstrap-tutorial/"> YourHousing</a>
-  </div>
-
-</footer>
-
+    </div>
 </template>
 
 <script>
-export default {
-  
-}
+  export default { 
+  }
 </script>
 
-<style>
+<style scoped>
+    .footer-wrap {
+        padding-top: 30px;
+        background-size: cover;
+    }
+
+    .footer-wrap h3 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .footer-wrap p {
+        font-size: 14px;
+        line-height: 24px;
+        color: #b3b3b3;
+        margin-top: 15px;
+    }
+
+    .footer-wrap p a {
+        color: #fff;
+        text-decoration: underline;
+        font-style: italic;
+    }
+
+    .footer-links li a {
+        font-size: 14px;
+        line-height: 26px;
+        color: #b3b3b3;
+    }
+
+    .footer-links li {
+        list-style-type: none;
+        margin-right: 25%;
+    }
+
+    .footer-category li {
+        list-style-type: none;
+        margin-right: 20%;
+    }
+
+    .footer-category li a {
+        font-size: 14px;
+        line-height: 26px;
+        color: #b3b3b3;
+    }
+
+    .info a {
+        color: #b3b3b3;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: normal;
+    }
+    
+    .copyright {
+        border-top: 1px solid #5f5f5f;
+        font-size: 14px;
+        color: #b3b3b3;
+        margin-top: 25px;
+        padding-top: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
 </style>
