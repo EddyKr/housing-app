@@ -17,7 +17,7 @@
                     </b-col>
                     <b-col sm="12" md="12" lg="2" xl="2">
                         <span class="input-group-addon">
-                            <b-button id="btnS" type="submit">
+                            <b-button class="btnSearch" type="submit">
                                 Search
                             </b-button>  
                         </span>
@@ -40,7 +40,7 @@
             font-style: italic;
     }
 
-    #btnS{
+    .btnSearch{
         width: 150px;
     }  
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <div class="img" v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
+    <div id="imgBackground">
         <my-banner />
         <b-container>
-            <div class="row" style="padding-top: 5%;padding-bottom: 5%;">
+            <div class="row" id="rowTiles">
                 <div class="col-md-4">
                     <my-grid/>
                 </div> 
@@ -14,7 +14,7 @@
                 </div> 
             </div> 
 
-            <div class="row" style="padding-top: 5%;padding-bottom: 5%;">
+            <div class="row" id="rowTiles" >
                 <div class="col-md-4">
                     <my-grid/>
                 </div> 
@@ -41,20 +41,20 @@
             MyBanner,
             MyGrid
             
-        },
-            data(){
-            return {
-                image:require('../assets/bckg2.jpg'),
-            }
-        },
-
+        }
     }
 </script>
 
 <style>
-    .img {
+    #imgBackground {
         max-width: 100%;
-        max-height: 100%;           
+        max-height: 100%; 
+        background-image: url('../assets/bckg2.jpg');       
+    }
+
+    #rowTiles{
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 
     .card-product .img-wrap {

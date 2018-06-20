@@ -1,11 +1,12 @@
 <template>
     <b-container class="bv-example-row">
-        <b-row>
-            <b-col></b-col>
-            <b-col sm="6" md="6" lg="5" xl="4">                
-                <h3 class="panel-title">Registration</h3>
+        <b-row> 
+            <b-col md="4" offset-md="4" sm="5" offset-sm="4">                
+                
                 <b-form @submit="submit()">
+
                     <div class="form-group">
+                                            <h3 class="panel-title" style="text-align: center;">Registration</h3>
                         <label class="sr-only" for="inlineFormInputName2">Name</label>
                         <b-input class="mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="E-mail" v-model="credentials.email" />
                     </div>
@@ -17,9 +18,7 @@
                     </div>
                     <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
                 </b-form>
-            </b-col>
-            <b-col></b-col>
-            
+            </b-col>            
         </b-row>
     </b-container>
 </template>
@@ -51,7 +50,7 @@
 <style scoped>
     h3 {
     color: whitesmoke;
-    margin-left: 30%;
+
     }
 </style>
 

@@ -9,12 +9,12 @@
                     Our main goal is to provide best possible freemium solution without 3rd parties for accommodation in The Netherlands. </p>
                 </div>
                 <div class="col-md-2 col-sm-2 text-center">
-                    <h3>Quick  LInks</h3>
+                    <h3>Quick  Links</h3>
                     <ul class="footer-links text-center">
-                        <li><a href="#."><router-link to="/">Home</router-link></a></li>
-                        <li><a href="#."><router-link to="">Search</router-link></a></li>
-                        <li><a href="#."><router-link to="register">Registration</router-link></a></li>
-                        <li><a href="#."><router-link to="login">LogIn</router-link></a></li>
+                        <li><a><router-link to="/">Home</router-link></a></li>
+                        <li><a><router-link to="">Search</router-link></a></li>
+                        <li><a><router-link to="register">Registration</router-link></a></li>
+                        <li><a><router-link to="login">LogIn</router-link></a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3 text-center">
