@@ -25,10 +25,12 @@ export default {
     signup(context, creds, redirect) {
       context.$http.post(SIGNUP_URL, creds)
       .then(function (response) {
-        localStorage.setItem('id_token', response.data.data.token)  
-        if(redirect) {
-          router.go(redirect)        
-        }  
+            let data = response.data
+            localStorage.setItem('id_token', data.token)  
+            
+            if(redirect) {
+                router.go(redirect)        
+            }  
       })
     },
   
