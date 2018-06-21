@@ -1,26 +1,26 @@
 <template>
-
-<b-container class="bv-example-row">
-    <b-row>
-        <b-col cols="6" md="4"></b-col>
-            <b-col cols="6" md="4">                
-                <h3 class="panel-title">Registration</h3>
+    <b-container class="bv-example-row">
+        <b-row> 
+            <b-col md="4" offset-md="4" sm="5" offset-sm="4">                
+                
                 <b-form @submit="submit()">
-                    <label class="sr-only" for="inlineFormInputName2">Name</label>
-                    <b-input class="mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="Jane Doe" v-model="credentials.email" />
 
-                    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-                    <b-input-group left="@" class="mb-2 mr-sm-2 mb-sm-0">
-                        <b-input type="password" id="inlineFormInputGroupUsername2" placeholder="Password" v-model="credentials.password"  />
-                    </b-input-group>
-
-                    <b-button type="submit" variant="primary">Register</b-button>
+                    <div class="form-group">
+                                            <h3 class="panel-title" style="text-align: center;">Registration</h3>
+                        <label class="sr-only" for="inlineFormInputName2">Name</label>
+                        <b-input class="mb-2 mr-sm-2 mb-sm-0" id="inlineFormInputName2" placeholder="E-mail" v-model="credentials.email" />
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+                        <b-input-group left="@" class="mb-2 mr-sm-2 mb-sm-0">
+                            <b-input type="password" id="inlineFormInputGroupUsername2" placeholder="Password" v-model="credentials.password"  />
+                        </b-input-group>
+                    </div>
+                    <input class="btn btn-lg btn-primary btn-block" type="submit" value="Register">
                 </b-form>
-            </b-col>
-            <b-col cols="6" md="4"></b-col>
-    </b-row>
-</b-container>
-
+            </b-col>            
+        </b-row>
+    </b-container>
 </template>
 
 <script>
@@ -48,9 +48,9 @@
 </script>
 
 <style scoped>
-h3 {
-  color: whitesmoke;
-  margin-left: 30%;
-}
+    h3 {
+    color: whitesmoke;
+
+    }
 </style>
 

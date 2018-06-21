@@ -1,8 +1,7 @@
 <template>
-
 	<figure class="card card-product">
-		<div class="img-wrap"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg"></div>
-
+		<div class="img-wrap"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg">
+		</div>
 		<figcaption class="info-wrap">
 				<h5 class="title">Title</h5>
 				<p class="desc">Some small description goes here</p>
@@ -16,21 +15,19 @@
 			<div class="price-wrap h5">
 				<span class="price-new">500 eu.</span> <del class="price-old"> 750 eu.</del>
 			</div> <!-- price-wrap.// -->
-		</div> <!-- bottom-wrap.// -->
-		
+		</div> <!-- bottom-wrap.// -->		
 	</figure>
-
 </template>
 
 
 <script>
-export default {    
-  data(){
-            return {
-                image:['']
-            }
-        }
-}
+	export default {    
+	data(){
+				return {
+					image:['']
+				}
+			}
+	}
 </script>
 
 <style>
