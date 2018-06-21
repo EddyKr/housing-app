@@ -11,10 +11,10 @@
                 <div class="col-md-2 col-sm-2 text-center">
                     <h3>Quick  Links</h3>
                     <ul class="footer-links text-center">
-                        <li><a><router-link to="/">Home</router-link></a></li>
-                        <li><a><router-link to="">Search</router-link></a></li>
-                        <li><a><router-link to="register">Registration</router-link></a></li>
-                        <li><a><router-link to="login">LogIn</router-link></a></li>
+                        <li><router-link to="/">Home</router-link></li>
+                        <li><router-link to="">Search</router-link></li>
+                        <li><router-link to="register">Registration</router-link></li>
+                        <li><router-link to="login">LogIn</router-link></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-3 text-center">
