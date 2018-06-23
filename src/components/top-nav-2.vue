@@ -27,5 +27,7 @@ export default {
 </script>
 
 <style>
-
+    .navbar{
+        background: darkslategray !important;
+    }
 </style>
