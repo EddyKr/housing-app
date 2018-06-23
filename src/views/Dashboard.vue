@@ -4,29 +4,7 @@
     <div id="imgBackground">
         <my-banner />
         <b-container>
-            <div class="row" id="rowTiles">
-                <div class="col-md-4">
-                    <my-grid/>
-                </div> 
-                <div class="col-md-4">
-                    <my-grid/>	
-                </div> 
-                <div class="col-md-4">
-                    <my-grid/>
-                </div> 
-            </div> 
-
-            <div class="row" id="rowTiles" >
-                <div class="col-md-4">
-                    <my-grid/>
-                </div> 
-                <div class="col-md-4">
-                    <my-grid/>
-                </div> 
-                <div class="col-md-4">
-                    <my-grid/>
-                </div>
-            </div> 
+            <my-grid/>
         </b-container>    
     </div>
 </div>
