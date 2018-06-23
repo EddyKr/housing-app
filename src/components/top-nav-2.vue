@@ -6,7 +6,7 @@
         <b-navbar-nav>
             <b-nav-item href="/dashboard">Home</b-nav-item>
             <b-nav-item href="/search">Search</b-nav-item>
-            <b-nav-item href="/dashboard">Appointments</b-nav-item>
+            <b-nav-item href="/appointment">Appointments</b-nav-item>
             <b-nav-item href="/dashboard">Test</b-nav-item>
         </b-navbar-nav>
         <!-- Right aligned nav items -->
