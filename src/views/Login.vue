@@ -1,4 +1,6 @@
 <template>
+  <div>
+    <top-nav-bar/>
 	<b-container class="bv-example-row">
 		<b-row>		
 			<b-col md="4" offset-md="4" sm="5" offset-sm="4">			
@@ -22,12 +24,17 @@
 			</b-col>		
 		</b-row>
 	</b-container>
+  </div>
 </template>
 
 <script>
-  import auth from '@/auth'
+    import auth from '@/auth'
+    import TopNavBar from '@/components/top-navbar.vue'
 
 	export default {
+	    components: {
+	        TopNavBar
+	    },
 		data() {
 			return {
 				credentials: {
