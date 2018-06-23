@@ -1,9 +1,8 @@
 <template>
-        <div id="app">
-            <top-nav-bar/>
-            <router-view/>
-            <my-footer/>
-        </div>
+    <div id="app">
+        <router-view/>
+        <my-footer/>
+    </div>
 </template>
 
 <script>
@@ -26,7 +25,8 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
-        color: #2c3e50;             
+        color: #2c3e50;       
+        background: darkslategray;      
     }
 
     #nav {
