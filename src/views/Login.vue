@@ -28,8 +28,7 @@
 </template>
 
 <script>
-  import auth from '@/auth'
-
+    import auth from '@/auth'
     import TopNavBar from '@/components/top-navbar.vue'
 
 	export default {
