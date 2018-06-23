@@ -1,4 +1,6 @@
 <template>
+ <div>
+  <top-nav-bar/>
   <b-container fluid class="p-4 bg-dark">
   <div  align="center">  
     <h2 id="pageTitle">Title</h2>
@@ -90,10 +92,16 @@
       </b-col>
     </b-row>
   </b-container>
+ </div>
 </template>
 
 <script>
-export default { 
+import TopNavBar from '@/components/top-nav-2.vue'
+
+export default {
+  components: {
+    TopNavBar
+  },
   data(){
       return {
           slide: 0,
