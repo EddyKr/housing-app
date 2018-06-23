@@ -1,6 +1,6 @@
 import router from '@/router'
 
-const API_URL = 'http://localhost:8765/api/'
+const API_URL = 'http://http://localhost/proep/proep-backend/api/'
 const LOGIN_URL = API_URL + 'users/token/'
 const SIGNUP_URL = API_URL + 'register'
 
@@ -17,7 +17,7 @@ export default {
         localStorage.setItem('id_token', response.data.data.token)  
 
         if(redirect) {
-          router.go(redirect)       
+          router.redirect(redirect)       
         }
      })
     },
@@ -29,7 +29,7 @@ export default {
             localStorage.setItem('id_token', data.token)  
             
             if(redirect) {
-                router.go(redirect)        
+                router.redirect(redirect)        
             }  
       })
     },

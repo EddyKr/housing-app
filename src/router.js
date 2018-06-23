@@ -6,10 +6,12 @@ import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import Profile from './views/Profile.vue'
 import Post from './views/Post.vue'
+import Dashboard from './views/Dashboard.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -40,7 +42,12 @@ export default new Router({
       path: '/post',
       name: 'post',
       component: Post
-    }    
+    },
+    {
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
+    }        
   ],
   redirect: [
     {

@@ -3,7 +3,7 @@
 		<b-row>		
 			<b-col md="4" offset-md="4" sm="5" offset-sm="4">			
 				<h3 class="panel-title" style="text-align: center;">Log In</h3>
-					<form @submit="login()" accept-charset="UTF-8" role="form">
+					<div>
 						<fieldset>
 							<div class="form-group">
 								<input class="form-control" v-model="credentials.email" placeholder="E-mail" name="email" type="text">
@@ -16,9 +16,9 @@
 									<input name="remember" type="checkbox" value="Remember Me"> Remember Me
 								</label>
 							</div>
-							<input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+							<router-link to="/dashboard" class="btn btn-lg btn-success btn-block">Login</router-link>
 						</fieldset>
-					</form>  	  
+					</div>  	  
 			</b-col>		
 		</b-row>
 	</b-container>

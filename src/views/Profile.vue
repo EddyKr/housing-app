@@ -1,4 +1,6 @@
 <template>
+<div>
+    <top-nav-bar/>
     <div class="img"  v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
         <b-container style="padding-top: 5%;padding-bottom: 5%;">
             <div class="container h-100">
@@ -51,10 +53,15 @@
             </b-modal>
         </b-container>
     </div>
+</div>
 </template>
 
 <script>
+    import TopNavBar from '@/components/top-nav-2.vue'
 export default {   
+    components: {
+        TopNavBar
+    },
     data(){
         return {
             image:require('../assets/bkgt.jpg'),
@@ -65,6 +72,10 @@ export default {
 </script>
 
 <style scoped>
+    .navbar{
+        background: darkslategray !important;
+    }
+
     .table td {
         text-align: center;   
     }
