@@ -7,6 +7,7 @@ import Register from './views/Register.vue'
 import Profile from './views/Profile.vue'
 import Post from './views/Post.vue'
 import Dashboard from './views/Dashboard.vue'
+import Appointment from './views/Appointment.vue'
 
 Vue.use(Router)
 
@@ -47,7 +48,12 @@ export default new Router({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard
-    }        
+    },
+    {
+      path: '/appointment',
+      name: 'Appointment',
+      component: Appointment
+    }    
   ],
   redirect: [
     {

@@ -25,7 +25,7 @@ export default {
 
 <style>
 .navbar{
-       background: #00000000  !important;   
+    background: darkslategray;
 }
 body {
     background-color: DarkSlateGray   ;
