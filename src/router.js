@@ -51,7 +51,7 @@ export default new Router({
       component: Dashboard
     },
     {
-      path: '/appointment',
+      path: '/appointments',
       name: 'Appointment',
       component: Appointment
     },
