@@ -1,6 +1,5 @@
 <template>
 <div>
-  <top-nav-bar/> 
     <div id="imgBackground">
         <my-banner />
         <b-container>
