@@ -131,18 +131,24 @@
 </template>
 
 <script>
-import TopNavBar from '@/components/top-nav-2.vue'
+import ApiHelper from '../apiHelper.js'
 
 export default {
-  components: {
-    TopNavBar
-  },
   data(){
       return {
+          property: [],
           slide: 0,
           sliding: null,
           avatar:require('../assets/profile.png')
       }
+  },
+  created: function() {
+    var self = this;
+    var data = {
+        post_id: this.$route.params.id
+    };
+    this.test = ApiHelper.apiPost(this, data, 'posts/view');
+    console.log(this.test);
   },
   methods: {
     onSlideStart (slide) {
