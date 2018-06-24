@@ -6,7 +6,7 @@
       <b-navbar-nav v-if="loggedIn">
             <b-nav-item href="/">Home</b-nav-item>
             <b-nav-item href="/search">Search</b-nav-item>
-            <b-nav-item href="/appointment">Appointments</b-nav-item>
+            <b-nav-item href="/appointments">Appointments</b-nav-item>
             <b-nav-item href="/dashboard">My offers</b-nav-item>
         </b-navbar-nav>
       <!-- Right aligned nav items -->
