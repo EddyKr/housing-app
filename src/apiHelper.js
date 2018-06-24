@@ -8,7 +8,6 @@ export default {
         let response = context.$http.post(url, data)
         .then(function (response) {
         
-        
             return response;
         });
 

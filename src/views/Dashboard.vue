@@ -4,7 +4,8 @@
         <my-banner />
         <b-container>
             <my-grid/>
-        </b-container>    
+        </b-container>
+        {{items}}    
     </div>
 </div>
 </template>
@@ -26,11 +27,20 @@
             
         },
         created:function() {
-            this.items = ApiHelper.apiPost(this, null, 'posts');
+            this.getItems();            
         },
         data() {
             return {
                 items: []
+            }
+        },
+        methods: {
+            getItems:function() {
+                // let self = this
+                // ApiHelper.apiPost(this, null, 'posts').then(function(respone){
+                //     self.items = respone.body.data;
+                //     console.log(self.items);
+                // })
             }
         }
     }
