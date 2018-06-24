@@ -3,7 +3,6 @@
         <top-nav-bar v-bind:loggedIn="logged"/>
         <router-view/>
         <my-footer/>
-        {{logged}}
     </div>
 </template>
 
