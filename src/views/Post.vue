@@ -57,6 +57,10 @@
                 </div>
             </b-col>
         </b-row>
+              <modal
+                v-show="isModalVisible"
+                    @close="closeModal"
+              />
       </b-col>
 
       <b-col sm="2" class="owner-info">
@@ -76,10 +80,11 @@
         </b-container>
 
         <b-container class="text-center contact-actions">
-            <a href="" class="btn btn-success">Schedule a viewing</a>
+            <input id="meeting" type="date" v-model="meeting_date"/>
+            <b-btn variant="btn btn-success" class="mb-3" v-on:click="scheduleMeeting()">Schedule a viewing</b-btn>
         </b-container>
         <b-container class="text-center contact-actions">
-            <a href="" class="btn btn-danger">Request more details</a>
+            <!-- <a href="" class="btn btn-danger">Request more details</a> -->
         </b-container>
       </b-col>
     </b-row>
@@ -89,13 +94,19 @@
 
 <script>
 import ApiHelper from '../apiHelper.js'
+import modal from '../components/modal.vue';
 
 export default {
+  components: {
+    modal
+  },
   data(){
       return {
           property: [],
           user: [],
           type: [],
+          meeting_date: '',
+          isModalVisible: false,
           slide: 0,
           sliding: null,
           avatar:require('../assets/profile.png')
@@ -122,6 +133,31 @@ export default {
           this.type = response.body.data.post.type;
           console.log(response.body.data.post);
         });
+    },
+    scheduleMeeting:function() {
+        console.log(this.property.id);
+        console.log(this.meeting_date);
+
+        if (this.meeting_date == ''){
+            return;
+        }
+
+        let payload = {
+            post_id: this.property.id,
+            meeting_time: this.meeting_date
+        }
+
+        ApiHelper.apiPost(this, payload, 'meetings/schedule').then(function(response){
+            if (response.body.success) {
+                this.showModal();
+            }
+        });
+    },
+    showModal() {
+        this.isModalVisible = true;
+    },
+    closeModal() {
+        this.isModalVisible = false;
     }
   } 
 }
