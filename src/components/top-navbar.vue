@@ -4,7 +4,7 @@
     <b-navbar-brand href="/">YourHousing</b-navbar-brand>
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav v-if="loggedIn">
-            <b-nav-item href="/dashboard">Home</b-nav-item>
+            <b-nav-item href="/">Home</b-nav-item>
             <b-nav-item href="/search">Search</b-nav-item>
             <b-nav-item href="/appointment">Appointments</b-nav-item>
             <b-nav-item href="/dashboard">My offers</b-nav-item>
@@ -40,7 +40,7 @@ export default {
 
 <style>
 .navbar{
-    background: darkslategray;
+    background: darkslategray !important;
 }
 body {
     background-color: DarkSlateGray   ;

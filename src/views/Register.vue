@@ -1,6 +1,5 @@
 <template>
   <div>
-    <top-nav-bar/>
     <b-container class="bv-example-row">
         <b-row> 
             <b-col md="4" offset-md="4" sm="5" offset-sm="4">                

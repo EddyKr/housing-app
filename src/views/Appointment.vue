@@ -1,6 +1,5 @@
 <template>
 <div style="background: white !important;">
-    <top-nav-bar/>
     <b-row>
         <b-col cols="4" offset="1" class="mt-4">
             <h1>Pending requests</h1>

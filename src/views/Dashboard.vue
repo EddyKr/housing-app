@@ -1,6 +1,5 @@
 <template>
 <div>
-  <top-nav-bar/> 
     <div id="imgBackground">
         <my-banner />
         <b-container>
@@ -17,6 +16,7 @@
     import MyBanner from '@/components/banner.vue'
     import MyGrid from '@/components/grid.vue'
     import TopNavBar from '@/components/top-nav-2.vue'
+    import ApiHelper from '../apiHelper.js'
 
     export default {
         components:{
@@ -24,6 +24,14 @@
             MyGrid,
             TopNavBar
             
+        },
+        created:function() {
+            this.items = ApiHelper.apiPost(this, null, 'posts');
+        },
+        data() {
+            return {
+                items: []
+            }
         }
     }
 </script>
