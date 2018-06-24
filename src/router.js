@@ -8,6 +8,7 @@ import Profile from './views/Profile.vue'
 import Post from './views/Post.vue'
 import Dashboard from './views/Dashboard.vue'
 import Appointment from './views/Appointment.vue'
+import Message from './views/Message.vue'
 
 Vue.use(Router)
 
@@ -53,7 +54,12 @@ export default new Router({
       path: '/appointment',
       name: 'Appointment',
       component: Appointment
-    }    
+    },
+    {
+      path: '/messages',
+      name: 'Messages',
+      component: Message
+    }       
   ],
   redirect: [
     {
