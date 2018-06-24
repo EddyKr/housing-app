@@ -1,6 +1,5 @@
 <template>
  <div>
-  <top-nav-bar/>
   <b-container fluid class="p-4 bg-dark">
   <div  align="center">  
     <h2 id="pageTitle">Studio Barrierweg</h2>

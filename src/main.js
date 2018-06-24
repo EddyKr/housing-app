@@ -5,8 +5,6 @@ import BootstrapVue from 'bootstrap-vue'
 import VeeValidate from 'vee-validate'
 import './registerServiceWorker'
 import VueResource from 'vue-resource'
-import auth from './auth'
-import VueRouter from 'vue-router';
 
 
 Vue.use(VueResource)

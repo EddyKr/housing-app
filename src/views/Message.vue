@@ -1,6 +1,5 @@
 <template>
     <b-container fluid>
-        <top-nav-bar/>
         <div class="flex-column">
             <span>Messages</span>
             <div class="d-flex">

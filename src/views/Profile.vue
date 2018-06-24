@@ -1,6 +1,5 @@
 <template>
 <div>
-    <top-nav-bar/>
     <div class="img"  v-bind:style="{ backgroundImage: 'url(' + image + ')' }">
         <b-container style="padding-top: 5%;padding-bottom: 5%;">
             <div class="container h-100">
