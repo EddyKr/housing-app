@@ -10,7 +10,7 @@ import VueRouter from 'vue-router';
 
 
 Vue.use(VueResource)
-// Vue.http.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token');
+Vue.http.headers.common['Authorization'] = 'Bearer ' + localStorage.getItem('id_token');
 Vue.http.headers.common['Accept'] = 'application/json';
 Vue.http.headers.common['Content-Type'] = 'application/json';
 Vue.http.options.root = 'http://localhost:8765/api/';
