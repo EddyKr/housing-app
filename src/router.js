@@ -9,6 +9,7 @@ import Post from './views/Post.vue'
 import Dashboard from './views/Dashboard.vue'
 import Appointment from './views/Appointment.vue'
 import Message from './views/Message.vue'
+import CreatePost from './views/Create-post.vue'
 
 Vue.use(Router)
 
@@ -59,7 +60,12 @@ export default new Router({
       path: '/messages',
       name: 'Messages',
       component: Message
-    }       
+    },
+    {
+      path: '/create',
+      name: 'CreatePost',
+      component: CreatePost
+    }        
   ],
   redirect: [
     {

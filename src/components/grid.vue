@@ -34,6 +34,10 @@ import ApiHelper from '../apiHelper.js'
                     self.properties = response.body.data.posts;
                     console.log(response.body.data.posts);
                     });
+            },
+            trimString:function(data) {
+                let result = data.substring(0,100);
+                return result;
             }
         },
         created:function() {

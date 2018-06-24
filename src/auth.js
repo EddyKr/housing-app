@@ -1,6 +1,6 @@
 import router from '@/router'
 
-const API_URL = 'http://localhost/proep/proep-backend/api/'
+const API_URL = 'http://localhost/proep-backend/api/'
 const LOGIN_URL = API_URL + 'token'
 const SIGNUP_URL = API_URL + 'register'
 
