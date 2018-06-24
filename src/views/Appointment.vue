@@ -28,6 +28,9 @@
                     </b-col>
                 </b-row>
             </div>
+            <div class="my-5" v-if="this.pending_meetings.length == 0">
+                <span style="color: #e74c3c" >You don't have any pending meetings!</span>
+            </div>
         </b-col>
 
         <b-col cols="4" offset="2" class="mt-4">
@@ -55,6 +58,9 @@
                         </div>
                     </b-col>
                 </b-row>
+            </div>
+            <div class="my-5" v-if="this.accepted_meetings.length == 0">
+                <span style="color: #e74c3c" >You don't have any accepted meetings!</span>
             </div>
         </b-col>
     </b-row>
@@ -96,9 +102,8 @@
 
             ApiHelper.apiPost(this, data, 'meetings/accept').then(function(response){
               console.log(response.body.data);
+              location.reload();
             });
-
-            location.reload();
         },
         declineMeeting:function(meeting_id) {
             console.log(meeting_id);
@@ -109,9 +114,8 @@
 
             ApiHelper.apiPost(this, data, 'meetings/decline').then(function(response){
               console.log(response.body.data);
+              location.reload();
             });
-
-            location.reload();
         }
       }
     }
