@@ -132,7 +132,7 @@ export default {
                 bedrooms: '',
                 minimum: '',
                 image: '',
-                size: '',
+                room_size: '',
                 available: '',
                 furnished: '',
             }],
@@ -160,7 +160,7 @@ export default {
                 bedrooms: this.new_property.bedrooms,
                 minimum: this.new_property.minimum,
                 image: this.new_property.image,
-                size: this.new_property.size,
+                size: this.new_property.room_size,
                 available: this.new_property.available,
                 furnished: this.new_property.furnished
                 }
