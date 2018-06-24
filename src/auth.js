@@ -1,23 +1,20 @@
 import router from '@/router'
 
-const API_URL = 'http://http://localhost/proep/proep-backend/api/'
-const LOGIN_URL = API_URL + 'users/token/'
+const API_URL = 'http://localhost/proep/proep-backend/api/'
+const LOGIN_URL = API_URL + 'token'
 const SIGNUP_URL = API_URL + 'register'
 
-export default {
-    user: {
-        authenticated: false
-      },
-    
+export default { 
   
     login(context, creds, redirect) {
+      console.log(creds);
       context.$http.post(LOGIN_URL, creds)
       .then(function (response) {
-          console.log(response);
         localStorage.setItem('id_token', response.data.data.token)  
 
         if(redirect) {
-          router.redirect(redirect)       
+          router.push(redirect) 
+          location.reload();      
         }
      })
     },
@@ -36,15 +33,18 @@ export default {
   
     logout() {
       localStorage.removeItem('id_token')
+      location.reload();
+      router.push('/')   
+         
     },
   
     checkAuth() {
       var jwt = localStorage.getItem('id_token')
       if(jwt) {
-        this.user.authenticated = true
+        return true
       }
       else {
-        this.user.authenticated = false      
+        return false      
       }
     },
   

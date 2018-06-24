@@ -1,7 +1,7 @@
 <template>
     <b-container fluid>
         <top-nav-bar/>
-        <b-row class="flex-column">
+        <div class="flex-column">
             <span>Messages</span>
             <div class="d-flex">
                 <b-col offset="2" cols="2" class="border bg-white">
@@ -66,7 +66,7 @@
                         </b-col>
                     </b-row>
                 </b-col>
-                <b-col cols="6" class="border bg-white">
+                <b-col cols="6" class="border bg-white" id="chat-window">
                     <div class="room-chat-container">
                     <ul class="room-chat-list" id="room-chat-list">
                         <li class="chat-object">
@@ -179,15 +179,15 @@
                                 </div>
                             </div>
                         </li>
-                    </ul>
-                    <form id="messageForm" onsubmit="return sendChatMessage();">
+                    </ul>                    
+                </div>
+                <form id="messageForm" onsubmit="return sendChatMessage();">
                         <input name="message" id="data" type="text" class="form-control" placeholder="Write your message..." maxlength="75">
                         <button type="button" id="datasend" class="btn btn-primary" style="display: none;">Send Message</button>
                     </form>
-                </div>
                 </b-col>
             </div>
-        </b-row>
+        </div>
     </b-container>
 </template>
 
@@ -202,6 +202,9 @@ export default {
 </script>
 
 <style>
+    #chat-window{
+        height: 570px;
+    }
     .profile-picture{
         width: 50px;
         height: 50px;
@@ -251,9 +254,9 @@ export default {
     .room-chat-container {
         padding: 25px;
         overflow-y: scroll;
-        display: inline-block;
+        display: grid;
         width: 100%;
-        min-height: 510px;
+        height: 520px;
     }
     .chat-object {
         display: flex;

@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <top-nav-bar v-bind:loggedIn="logged"/>
         <router-view/>
         <my-footer/>
     </div>
@@ -10,11 +11,20 @@
     import 'bootstrap-vue/dist/bootstrap-vue.css'
     import TopNavBar from '@/components/top-navbar.vue'
     import MyFooter from '@/components/footer.vue'
+    import auth from '@/auth.js'
 
     export default {
         components:{
             TopNavBar,
             MyFooter
+        },
+        data() {
+            return {
+                logged : auth.checkAuth()
+            }
+        },
+        updated() {
+            this.logged = auth.checkAuth();
         }
     }
 </script>
