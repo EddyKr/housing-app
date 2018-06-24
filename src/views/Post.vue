@@ -2,101 +2,58 @@
  <div>
   <b-container fluid class="p-4 bg-dark">
   <div  align="center">  
-    <h2 id="pageTitle">Studio Barrierweg</h2>
+    <h2 id="pageTitle">{{property.title}}</h2>
   </div>
     <b-row >
       <b-col sm="8" offset-sm="1">
 
-        <b-carousel id="carousel1"
-        style="text-shadow: 1px 1px 2px #333;"
-        controls
-        indicators
-        background="#ababab"
-        :interval="4000"
-        img-width="1024"
-        img-height="480"
-        v-model="slide"
-        @sliding-start="onSlideStart"
-        @sliding-end="onSlideEnd">
-          <b-carousel-slide
-          img-src="https://media.pararius.nl/image/PR0001462000/PR0001462728/image/jpeg/613x920/EindhovenBarrierweg-9d8f_1.jpg">
-          </b-carousel-slide>
-          <b-carousel-slide 
-          img-src="https://media.pararius.nl/image/PR0001462000/PR0001462728/image/jpeg/613x920/EindhovenBarrierweg-bcd9_2.jpg">
-          </b-carousel-slide>
-          <b-carousel-slide 
-          img-src="https://media.pararius.nl/image/PR0001462000/PR0001462728/image/jpeg/613x920/EindhovenBarrierweg-3d98_4.jpg">
-          </b-carousel-slide>
-          <b-carousel-slide>
-          <img slot="img" class="d-block img-fluid w-100" width="1024" height="480"
-          src="https://media.pararius.nl/image/PR0001462000/PR0001462728/image/jpeg/613x920/EindhovenBarrierweg-7a9e_6.jpg" alt="image slot">
-          </b-carousel-slide>
-        </b-carousel>
+        <img alt="User Pic" :src="property.image" id="property-img">
         <b-row>
             <b-col sm="6" class="property-details">
                 <table class="table table-dark">
                   <tbody>
                     <tr>
                       <td>City</td>
-                      <td>Eindhoven</td>
+                      <td>{{property.city}}</td>
                     </tr>
                     <tr>
                       <td>Address</td>
-                      <td>Barrierweg</td>
+                      <td>{{property.address}}</td>
                     </tr>
                     <tr>
                       <td>Post code</td>
-                      <td>5622 CM</td>
+                      <td>{{property.postcode}}</td>
                     </tr>
                     <tr>
                       <td>Property type</td>
-                      <td>Studio</td>
+                      <td>{{type.name}}</td>
                     </tr>
                     <tr>
                       <td>Property size</td>
-                      <td>28 m²</td>
+                      <td>{{property.size}} m²</td>
                     </tr>
                     <tr>
                       <td>Minimal renting period</td>
-                      <td>6 months</td>
+                      <td>{{property.minimum}} months</td>
                     </tr>
                     <tr>
                      <td>Available from</td>
-                      <td>1/1/2019</td>
-                    </tr>
-                    <tr>
-                      <td>Available till</td>
-                      <td>Not specified</td>
+                      <td>{{property.available}}</td>
                     </tr>
                     <tr>
                       <td>Rent per month</td>
-                      <td>485€</td>
+                      <td>{{property.price}}€</td>
                     </tr>
                     <tr>
                       <td>Deposit</td>
-                      <td>485€</td>
+                      <td>{{property.price}}€</td>
                     </tr>
                   </tbody>
                 </table>
             </b-col>
             <b-col sm="6">
                 <span class="description-title">Description</span>
-                <div class="description">
-                    <p>Fully independent living space located on the 2nd floor of a stately home in Eindhoven, in the Woensel district.</p>
-
-                    <p>The living space is located on the 2nd floor. Via a staircase you reach the living area. On the hall is the toilet located, pantry and central heating boiler.</p>
-
-                    <p>Separate kitchen with hob, extractor and cupboard space. Shower is in the same room as the kitchen.</p>
-
-                    <p>Separate living room with window units.</p>
-
-                    <p>Through a sleeping loft you reach the bedroom with a skylight.</p>
-
-                    <p>Rental price Euro 485.00, - including gas, water, electricity, TV, internet and local taxes.</p>
-
-                    <p>Deposit 1 month rent.</p>
-
-                    <p>Minimal rental periode 12 months.</p>
+                <div class="description" v-html="property.description">
                 </div>
             </b-col>
         </b-row>
@@ -106,16 +63,16 @@
         <h1>Contact</h1>
 
         <div  align="center landlord">
-            <img alt="User Pic" :src="avatar" style="width: 30%;">
-            <p>Floris</p>
+            <img alt="User Avatar" :src="avatar" style="width: 30%;">
+            <p>{{user.first_name}}</p>
         </div>
 
 
         <b-container class="text-center information-container">
-            <span class="information-label information">Phone: </span> <span class="information-value information">4564654567</span>
+            <span class="information-label information">Phone: </span> <span class="information-value information">{{user.phone}}</span>
         </b-container>
         <b-container class="text-center information-container">
-            <span class="information-label information">Email: </span> <span class="information-value information">some@email.com</span>
+            <span class="information-label information">Email: </span> <span class="information-value information">{{user.email}}</span>
         </b-container>
 
         <b-container class="text-center contact-actions">
@@ -137,6 +94,8 @@ export default {
   data(){
       return {
           property: [],
+          user: [],
+          type: [],
           slide: 0,
           sliding: null,
           avatar:require('../assets/profile.png')
@@ -147,8 +106,7 @@ export default {
     var data = {
         post_id: this.$route.params.id
     };
-    this.test = ApiHelper.apiPost(this, data, 'posts/view');
-    console.log(this.test);
+    this.getPostInfo(data);
   },
   methods: {
     onSlideStart (slide) {
@@ -156,6 +114,14 @@ export default {
     },
     onSlideEnd (slide) {
       this.sliding = false
+    },
+    getPostInfo:function(data) {
+        ApiHelper.apiPost(this, data, 'posts/view').then(function(response){
+          this.property = response.body.data.post;
+          this.user = response.body.data.post.user;
+          this.type = response.body.data.post.type;
+          console.log(response.body.data.post);
+        });
     }
   } 
 }
@@ -204,5 +170,11 @@ export default {
     float: left;
     text-align: left;
     font-size: 0.9rem;
+  }
+
+  #property-img {
+    width: 100%;
+    max-height: 560px;
+    margin-bottom: 10px;
   }
 </style>
