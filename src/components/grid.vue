@@ -7,7 +7,7 @@
                 </div>
                 <figcaption class="info-wrap">
                         <h5 class="title">{{prop.address}}, {{prop.city}}</h5>
-                        <div v-html="prop.description"  class="desc"></div>
+                        <div v-html="trimString(prop.description)"  class="desc"></div>
                     <router-link :to="{name:'post', params:{id: prop.id}}">View property</router-link>
                 </figcaption>
             </figure>
@@ -34,6 +34,10 @@ import ApiHelper from '../apiHelper.js'
                     self.properties = response.body.data.posts;
                     console.log(response.body.data.posts);
                     });
+            },
+            trimString:function(data) {
+                let result = data.substring(0,100);
+                return result;
             }
         },
         created:function() {
