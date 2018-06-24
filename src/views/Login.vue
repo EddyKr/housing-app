@@ -1,6 +1,5 @@
 <template>
   <div>
-    <top-nav-bar/>
 	<b-container class="bv-example-row">
 		<b-row>		
 			<b-col md="4" offset-md="4" sm="5" offset-sm="4">			
@@ -18,7 +17,8 @@
 									<input name="remember" type="checkbox" value="Remember Me"> Remember Me
 								</label>
 							</div>
-							<router-link to="/dashboard" class="btn btn-lg btn-success btn-block">Login</router-link>
+							<button @click="login()" type="submit" class="btn btn-lg btn-success btn-block">Login</button>
+							<!-- <router-link to="/dashboard" class="btn btn-lg btn-success btn-block">Login</router-link> -->
 						</fieldset>
 					</div>  	  
 			</b-col>		
