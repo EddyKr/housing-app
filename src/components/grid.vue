@@ -36,7 +36,7 @@ import ApiHelper from '../apiHelper.js'
                     });
             },
             trimString:function(data) {
-                let result = data.substring(0,100);
+                let result = data.substring(0,120);
                 return result;
             }
         },

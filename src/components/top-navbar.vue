@@ -5,9 +5,9 @@
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav v-if="loggedIn">
             <b-nav-item href="/">Home</b-nav-item>
-            <b-nav-item href="/search">Search</b-nav-item>
+            <b-nav-item href="/create">Add property</b-nav-item>
             <b-nav-item href="/appointments">Appointments</b-nav-item>
-            <b-nav-item href="/dashboard">My offers</b-nav-item>
+            <!-- <b-nav-item href="/dashboard">My offers</b-nav-item> -->
         </b-navbar-nav>
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
@@ -28,7 +28,7 @@
 <script>
     import auth from '@/auth.js'
 
-export default {  
+export default {
   props: ['loggedIn'],
   methods: {
     logout:function() {

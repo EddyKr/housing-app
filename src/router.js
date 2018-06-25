@@ -10,6 +10,7 @@ import Dashboard from './views/Dashboard.vue'
 import Appointment from './views/Appointment.vue'
 import Message from './views/Message.vue'
 import CreatePost from './views/Create-post.vue'
+import Search from './views/Search.vue'
 
 Vue.use(Router)
 
@@ -65,7 +66,12 @@ export default new Router({
       path: '/create',
       name: 'CreatePost',
       component: CreatePost
-    }        
+    },
+    {
+      path: '/search/:phrase',
+      name: 'Search',
+      component: Search
+    }
   ],
   redirect: [
     {

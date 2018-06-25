@@ -13,11 +13,11 @@
                 <b-row class="text-center">
                     <b-col></b-col>
                     <b-col sm="12" md="12" lg="8" xl="8">
-                        <input type="text" class="form-control"  placeholder="City/Address/etc..." >
+                        <input type="text" class="form-control" v-model="phrase"  placeholder="City/Address/etc..." >
                     </b-col>
                     <b-col sm="12" md="12" lg="2" xl="2">
                         <span class="input-group-addon">
-                            <b-button class="btnSearch" type="submit">
+                            <b-button class="btnSearch" type="submit" v-on:click="performSearch()">
                                 Search
                             </b-button>  
                         </span>
@@ -30,7 +30,20 @@
 </template>
 
 <script>
-    export default {           
+import ApiHelper from '../apiHelper.js'
+
+    export default {
+       data() {
+        return {
+            phrase: ''
+        }
+       },
+       methods: {
+          performSearch:function() {
+            this.$router.push({name:'Search', params:{phrase: this.phrase}});
+            location.reload();
+          }
+       }
     }
 </script>
 

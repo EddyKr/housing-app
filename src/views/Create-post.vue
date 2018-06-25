@@ -1,7 +1,7 @@
 <template>
 <b-container class="bg-white">
     <b-row>
-        <b-col cols="6">
+        <b-col cols="4" offset="4">
             <b-form >
                 <b-form-group
                                 label="Property type:"
